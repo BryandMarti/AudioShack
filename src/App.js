@@ -1,16 +1,41 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from './home';
+import ContactUs from './ContactUs';
 import Products from './Products';
+
 
 function App() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a className="navbar-brand" href='/Products'>Products</a>
-        <a className="navbar-brand" href='/ContactUs'>ContactUs</a>
-      </nav>
-      <Products />
+      <header className='App-Header'>
+        <Router className="navRouter">
+          <div  className="nav">
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/products">Products</Link>
+                </li>
+                <li>
+                  <Link to="/contact">Contact</Link>
+                </li>
+              </ul>
+            </nav>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/contact" element={<ContactUs />} />
+            </Routes>
+
+          </div>
+        </Router>
+      </header>
     </div>
   );
 }
+
 
 export default App;
