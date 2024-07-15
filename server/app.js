@@ -24,9 +24,9 @@ connection.connect((err) => {
   }
   console.log('Successfully connected to MySQL database.');
 });
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'build')));
 
-// app.use('/images', express.static(path.join(__dirname, 'src', 'images')));
+app.use('/images', express.static(path.join(__dirname, 'src', 'images')));
 
 app.get('/api/products', (req, res) => {
   const query = 'SELECT Name, Price, Description, ImgPath FROM EProducts';
