@@ -6,7 +6,6 @@ dotenv.config();
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'build')));
 
 const PORT = process.env.PORT || 8080;
 
@@ -25,8 +24,9 @@ connection.connect((err) => {
   }
   console.log('Successfully connected to MySQL database.');
 });
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/images', express.static(path.join(__dirname, 'src', 'images')));
+// app.use('/images', express.static(path.join(__dirname, 'src', 'images')));
 
 app.get('/api/products', (req, res) => {
   const query = 'SELECT Name, Price, Description, ImgPath FROM EProducts';
