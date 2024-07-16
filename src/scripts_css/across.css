@@ -9,12 +9,21 @@ body {
   background-size: cover;
 }
 
+nav {
+  display: flex;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(3px);
+  box-shadow: 0 15px 30px 0 #0000005e;
+  justify-content: space-between;
+  padding-right: 35px;
+}
+
 .logo {
   display: flex;
   justify-content: start;
   align-items: center;
   left: 50px;
-  width: 100%;
+  width: 20vh;
 }
 
 .bouncing-blob {
