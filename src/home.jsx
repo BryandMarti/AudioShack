@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import './scripts_css/across.css';
+import { initBlobs } from './scripts_css/bouncy';
 
-export default function home() {
+const Home = () => {
+  useEffect(() => {
+    initBlobs();
+  }, []);
+
   return (
     <div>
-      <h2>Home</h2>
-      <p>This is the home page</p>
+      <div className="bouncing-blobs-container">
+        <div className="bouncing-blobs-glass"></div>
+        <div className="bouncing-blobs">
+          <div className="bouncing-blob bouncing-blob--blue"></div>
+          <div className="bouncing-blob bouncing-blob--blue"></div>
+          <div className="bouncing-blob bouncing-blob--blue"></div>
+          <div className="bouncing-blob bouncing-blob--light-blue"></div>
+          <div className="bouncing-blob bouncing-blob--purple"></div>
+          <div className="bouncing-blob bouncing-blob--purple"></div>
+          <div className="bouncing-blob bouncing-blob--pink"></div>
+          <div className="bouncing-blob bouncing-blob--pink"></div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
+export default Home;

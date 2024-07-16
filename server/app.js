@@ -42,12 +42,6 @@ app.get('/api/products', (req, res) => {
 
 
 
-app.get('/src/ContactUs', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'ContactUs'));
-});
-
-
-
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
