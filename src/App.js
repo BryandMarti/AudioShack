@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from './home';
 import ContactUs from './ContactUs';
 import Products from './Products';
+import logo from './staticImgs/audiologo.png';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Router className="navRouter">
           <div  className="nav">
             <nav>
+              <img src={logo} alt="Logo" className='logo' />
               <ul>
                 <li>
                   <Link to="/">Home</Link>
