@@ -1,0 +1,20 @@
+.CodeMain404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Code404 {
+  display: flex;
+  justify-content: center;
+}
+
+.ErrorLogo {
+  position: absolute;
+  width: 40vh;
+  bottom: 20vh;
+}
+.Spaceman {
+display: flex;
+}

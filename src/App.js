@@ -1,42 +1,49 @@
 import React from 'react';
 import './scripts_css/across.css'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from './home';
-import ContactUs from './ContactUs';
-import Products from './Products';
+import Home from './jsxClient/home';
+import ContactUs from './jsxClient/ContactUs';
+import Products from './jsxClient/Products';
+import Error404 from './jsxClient/404';
 import logo from './staticImgs/Audiologo.png';
-
-
+import './scripts_css/Navigation.css';
+import Footer from './jsxClient/footer';
+import HamburgerMenu from './jsxClient/hamburgerMenu';
 
 function App() {
   return (
     <div>
       <header className='App-Header'>
         <Router className="navRouter">
-          <div  className="navBar">
-            <nav>
-              <img src={logo} alt="Logo" className='LogoImg' />
+          <div className="WholePage">
+            <nav className="navBar">
+              <Link to="/" className="LogoLink">
+                <img src={logo} alt="Logo" className='LogoImg' />
+              </Link>
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link  className='NavLinks' to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/products">Products</Link>
+                  <Link className='NavLinks' to="/products">Products</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Contact</Link>
+                  <Link className='NavLinks' to="/contact">Contact</Link>
                 </li>
               </ul>
+          <HamburgerMenu />
             </nav>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
               <Route path="/contact" element={<ContactUs />} />
+              <Route path="*" element={<Error404 />} />
             </Routes>
 
           </div>
         </Router>
       </header>
+      <Footer />
     </div>
   );
 }
