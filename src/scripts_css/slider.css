@@ -1,0 +1,74 @@
+.SliderTitleDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff7a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.SliderTitle {display: flex;
+  font-size: 1.7em;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  border-radius: 10em;
+}
+
+.SliderTitle:hover {
+  background: #03e8f47e;
+  color: #050801;
+  box-shadow: 0 0 5px #f4c4039f,
+      0 0 25px #03e9f4,
+      0 0 50px #03e9f4,
+      0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.LinktoProducts {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.StoreCards {
+  background-color: #ffffff7a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.StoreCards:hover {
+  transform: translateY(-10px);
+}
+
+.SliderImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.slick-dots li button:before {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #9ee2f1;
+}
