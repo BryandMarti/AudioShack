@@ -20,7 +20,8 @@ function App() {
               <Link to="/" className="LogoLink">
                 <img src={logo} alt="Logo" className='LogoImg' />
               </Link>
-              <ul>
+              <div className='LinksDiv'>
+              <ul className='navBarUl'>
                 <li>
                   <Link  className='NavLinks' to="/">Home</Link>
                 </li>
@@ -32,6 +33,7 @@ function App() {
                 </li>
               </ul>
           <HamburgerMenu />
+              </div>
             </nav>
             <Routes>
               <Route path="/" element={<Home />} />

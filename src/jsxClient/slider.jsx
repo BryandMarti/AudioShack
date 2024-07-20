@@ -13,11 +13,20 @@ const ProductSlider = ({ products }) => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 7,
+    slidesToShow: 5,
     slidesToScroll: 1,
     swipeToSlide: true,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
+  
 
   const handleCardClick = (product) => {
     setSelectedProduct(product);

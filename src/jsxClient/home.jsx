@@ -20,7 +20,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className='homeIndex'>
       <BouncyBalls />
       <main className="home">
         <div className='Home-Div'>
