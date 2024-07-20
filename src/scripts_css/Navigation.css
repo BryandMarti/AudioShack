@@ -8,21 +8,25 @@ nav {
   padding-right: 35px;
 }
 
+.LinksDiv {
+  display: flex;
+}
 
 ul {
   display: flex;
   justify-content: end;
   gap: 3rem;
   list-style: none;
+  align-items: center;
 }
 
 ul li {
   color: #fff;
-  display: grid;
+  display: flex;
   place-content: center;
   margin: 0;
+  align-items: center;
 }
-
 .menu {
   color: #fff;
   padding: 0.5rem;
@@ -67,8 +71,8 @@ ul li {
   justify-content: start;
   align-items: center;
   left: 50px;
-  width: 22%;
-  margin: 2vh 2vh 1vh 6vh;
+  width: 44%;
+  margin: 2vh 2vh 1vh 2vh;
 }
 
 .LogoImg:hover{
@@ -204,15 +208,29 @@ ul li {
 
 
 
-@media screen and (max-width: 991px) {
-  .NavLinks {
-      font-size: 1.5em;
+@media (max-width: 768px) {
+
+  ul {
+    width: max-content;
+  }
+  .navBarUl {
+    display: none;
   }
 
   .LogoImg {
-    width: 50%;
+    width: 30%;
     margin: 2vh 2vh 1vh 2vh;
   }
+}
 
+@media (max-width: 480px) {
+  .NavLinks {
+      font-size: 1.5em;
+      display: flex;
+  }
 
+  .LogoImg {
+    width: 25%;
+    margin: 2vh 2vh 1vh 2vh;
+  }
 }

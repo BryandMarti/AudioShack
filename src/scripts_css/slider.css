@@ -67,8 +67,46 @@
 .slick-dots li button:before {
   font-size: 20px;
   color: #ffffff;
+  margin-top: 0.3rem;
 }
 
 .slick-dots li.slick-active button:before {
   color: #9ee2f1;
 }
+
+@media (max-width: 768px) {
+  .StoreCards {
+    padding: 15px;
+    margin: 5px;
+  }
+
+  .StoreCards h3 {
+    font-size: small;
+  }
+
+  .SliderTitle {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .StoreCards {
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .SliderImage {
+    width: 50%;
+  }
+  .StoreCards h3, p {
+    font-size: x-small;
+  }
+
+  .SliderTitle {
+    font-size: 1.2em;
+  }
+}
+
