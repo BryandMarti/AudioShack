@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
 .menu-icon {
   cursor: pointer;
@@ -32,12 +32,15 @@
 .menu-links {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgb(61, 210, 230);
   position: absolute;
   top: 50px;
   right: 10px;
   border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 40%;
   padding: 10px;
+  margin-top: 50px;
 }
 
 .menu-links li {
@@ -49,10 +52,14 @@
     display: flex;
     align-items: center;
   }
-  .menu-links {
-    display: flex;
-    width: 50%;
-  }
   
 
+}
+
+
+@media  screen and (max-width: 500px) {
+  
+  .menu-links {
+    width: 60%;
+  }
 }

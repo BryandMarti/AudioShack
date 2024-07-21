@@ -14,10 +14,10 @@ const Footer = () => {
       <div className='footerSocial'>
         <h2>Follow Us</h2>
         <ul>
-          <li><a href='https://facebook.com'><i className='face'></i> Facebook</a></li>
-          <li><a href='https://twitter.com'><i className='Twit'></i> Twitter</a></li>
-          <li><a href='https://instagram.com'><i className='IG'></i> Instagram</a></li>
-          <li><a href='https://linkedin.com'><i className='linkedin'></i> LinkedIn</a></li>
+          <li><a href='https://facebook.com' target='blanck'><i className='face'></i> Facebook</a></li>
+          <li><a href='https://twitter.com' target='blanck'><i className='Twit'></i> Twitter</a></li>
+          <li><a href='https://instagram.com' target='blanck'><i className='IG'></i> Instagram</a></li>
+          <li><a href='https://www.linkedin.com/in/bmarti2899/' target='blanck'><i className='linkedin'></i> LinkedIn</a></li>
         </ul>
       </div>
       <div className='footerBottom'>

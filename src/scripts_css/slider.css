@@ -64,6 +64,11 @@
   margin-bottom: 15px;
 }
 
+.slick-dots {
+  display: contents;
+  color: antiquewhite;
+}
+
 .slick-dots li button:before {
   font-size: 20px;
   color: #ffffff;
@@ -89,7 +94,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .StoreCards {
     display: flex;
     padding: 10px;
@@ -99,7 +104,7 @@
   }
 
   .SliderImage {
-    width: 50%;
+    width: 100%;
   }
   .StoreCards h3, p {
     font-size: x-small;
