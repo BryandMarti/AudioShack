@@ -101,7 +101,7 @@ const ContactUsForm = () => {
         </label>
         <br />
         <label>
-          Subject:
+          Suggestions:
           <input
             type="text"
             value={subject}

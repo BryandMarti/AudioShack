@@ -1,5 +1,9 @@
 import React from 'react';
 import '../scripts_css/footer.css';
+import facebookIcon from '../staticImgs/facebook.png'; 
+import twitterIcon from '../staticImgs/xtwitter.png';
+import instagramIcon from '../staticImgs/instagram.png';
+import linkedinIcon from '../staticImgs/linked.png'; 
 
 
 const Footer = () => {
@@ -14,10 +18,26 @@ const Footer = () => {
       <div className='footerSocial'>
         <h2>Follow Us</h2>
         <ul>
-          <li><a href='https://facebook.com' target='blanck'><i className='face'></i> Facebook</a></li>
-          <li><a href='https://twitter.com' target='blanck'><i className='Twit'></i> Twitter</a></li>
-          <li><a href='https://instagram.com' target='blanck'><i className='IG'></i> Instagram</a></li>
-          <li><a href='https://www.linkedin.com/in/bmarti2899/' target='blanck'><i className='linkedin'></i> LinkedIn</a></li>
+          <li>
+            <a href='https://facebook.com' target='_blank' rel='noopener noreferrer'>
+              <img src={facebookIcon} alt='Facebook' className='social-icon' /> Facebook
+            </a>
+          </li>
+          <li>
+            <a href='https://twitter.com' target='_blank' rel='noopener noreferrer'>
+              <img src={twitterIcon} alt='Twitter' className='social-icon' /> Twitter
+            </a>
+          </li>
+          <li>
+            <a href='https://instagram.com' target='_blank' rel='noopener noreferrer'>
+              <img src={instagramIcon} alt='Instagram' className='social-icon' /> Instagram
+            </a>
+          </li>
+          <li>
+            <a href='https://www.linkedin.com/in/bmarti2899/' target='_blank' rel='noopener noreferrer'>
+              <img src={linkedinIcon} alt='LinkedIn' className='social-icon' /> LinkedIn
+            </a>
+          </li>
         </ul>
       </div>
       <div className='footerBottom'>

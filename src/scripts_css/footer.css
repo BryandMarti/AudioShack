@@ -85,6 +85,11 @@
   font-size: 18px;
 }
 
+.social-icon {
+  width: 5%;
+  padding: 5px;
+}
+
 @media (max-width: 768px) {
   .footerC {
     flex-direction: column;
