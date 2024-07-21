@@ -32,7 +32,7 @@ function App() {
                   <Link className='NavLinks' to="/contact">Contact</Link>
                 </li>
               </ul>
-          <HamburgerMenu />
+              <HamburgerMenu />
               </div>
             </nav>
             <Routes>

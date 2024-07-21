@@ -20,7 +20,7 @@ main {
   font-size: 2em;
 }
 
-.ProductsFilter div {
+.ProductsFilter {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +39,45 @@ main {
   border-radius: 4px;
 }
 
-@media (min-width: 600px) {
+.cart {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #f9f9f9;
+}
+
+.cart h2 {
+  margin-bottom: 0.5rem;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cart-item h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item-controls button {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  font-size: 1rem;
+}
+
+/* @media (min-width: 600px) {
   .ProductsFilter {
     background-color: #f0ffff3b;
     border-radius: 30px;
@@ -60,7 +98,7 @@ main {
   .ProductsFilter select {
     margin-left: 10px;
   }
-}
+} */
 
 .products-grid {
   display: grid;
@@ -161,19 +199,24 @@ main {
 }
 
 @media (max-width: 768px) {
+
+
+
+
   .products-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   .ProductsFilter {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     flex-direction: row;
     background-color: #f0ffff3b;
     border-radius: 30px;
     justify-content: space-around;
   }
 
-  .ProductsFilter div {
+  .ProductsFilter {
     flex-direction: column;
     margin: 10px 0;
   }
@@ -181,14 +224,48 @@ main {
   .ProductsFilter select {
     margin: 0;
   }
+
+ 
+
+  .cart-container {
+    display: flex;
+    align-items: center;
+    grid-column: 1 / 4;
+    justify-content: center;
+    margin: 10px;
+  }
+
+  .cart {
+    background-color: rgba(250, 235, 215, 0.342);
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cart-item p {
+    font-size: small;
+  }
+
+  .cart-item-controls button {
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
+
+  .Card img {
+    width: 60%;
+  }
+
+
   .products-grid {
     grid-template-columns: 1fr;
   }
 
-  .ProductsFilter div {
+  .ProductsFilter {
     margin: 5px 0;
   }
   .ProductsFilter {
@@ -197,5 +274,9 @@ main {
     background-color: #f0ffff3b;
     border-radius: 30px;
     justify-content: space-around;
+  }
+
+  .cart-container {
+    padding: 10px;
   }
 }

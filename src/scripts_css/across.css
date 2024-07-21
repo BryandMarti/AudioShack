@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: Copperplate, Papyrus, fantasy;
   background-image: url('https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
   background-size: cover;
 }
@@ -108,14 +108,4 @@ nav {
   }
 }
 
-@media(max-width: 500px) {
-  .tutorial-link a {
-    font-size: 14px;
-    padding: 2px 4px;
-  }
-
-  .tutorial-link svg {
-    width: 15px;
-  }
-}
 

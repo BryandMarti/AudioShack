@@ -8,6 +8,7 @@ function Products() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [sortOrder, setSortOrder] = useState('');
   const [productType, setProductType] = useState('');
+  const [cart, setCart] = useState({});
 
   useEffect(() => {
     fetch('/api/products')
@@ -42,7 +43,43 @@ function Products() {
     setProductType(e.target.value);
   };
 
-  function renderProducts(products) {
+  const addToCart = (product) => {
+    setCart((prevCart) => {
+      const updatedCart = { ...prevCart };
+      if (updatedCart[product.Id]) {
+        updatedCart[product.Id].quantity += 1;
+      } else {
+        updatedCart[product.Id] = { ...product, quantity: 1 };
+      }
+      return updatedCart;
+    });
+  };
+
+  const incrementQuantity = (productId) => {
+    setCart((prevCart) => {
+      const updatedCart = { ...prevCart };
+      updatedCart[productId].quantity += 1;
+      return updatedCart;
+    });
+  };
+
+  const decrementQuantity = (productId) => {
+    setCart((prevCart) => {
+      const updatedCart = { ...prevCart };
+      if (updatedCart[productId].quantity > 1) {
+        updatedCart[productId].quantity -= 1;
+      } else {
+        delete updatedCart[productId];
+      }
+      return updatedCart;
+    });
+  };
+
+  const calculateTotalCost = () => {
+    return Object.values(cart).reduce((total, item) => total + item.Price * item.quantity, 0);
+  };
+
+  const renderProducts = (products) => {
     let filteredProducts = [...products];
 
     if (sortOrder) {
@@ -64,12 +101,36 @@ function Products() {
               </div>
               <h2>{product.Name}</h2>
               <p>${product.Price}</p>
+              <button onClick={(e) => { e.stopPropagation(); addToCart(product); }}>Add to Cart</button>
             </div>
           ))}
         </div>
       </div>
     );
-  }
+  };
+
+  const renderCart = () => {
+    const cartItems = Object.values(cart);
+    if (cartItems.length === 0) return <p>Your cart is empty</p>;
+
+    return (
+      <div className="cart">
+        {cartItems.map((item) => (
+          <div key={item.Id} className="cart-item">
+            <p>Price: ${item.Price}</p>
+            <div className="cart-item-controls">
+              <button onClick={() => decrementQuantity(item.Id)}>-</button>
+              <span>{item.quantity}</span>
+              <button onClick={() => incrementQuantity(item.Id)}>+</button>
+            </div>
+          </div>
+        ))}
+        <div className="cart-total">
+          <h3>Total: ${calculateTotalCost().toFixed(2)}</h3>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <main>
@@ -97,6 +158,9 @@ function Products() {
             <option value="Special">Special</option>
           </select>
         </div>
+        <div className="cart-container">
+        {renderCart()}
+        </div>
       </div>
       {renderProducts(products)}
 
@@ -108,6 +172,7 @@ function Products() {
             <img src={selectedProduct.ImgPath} alt={selectedProduct.Name} />
             <p>${selectedProduct.Price}</p>
             <p>{selectedProduct.Description}</p>
+            <button onClick={(e) => { e.stopPropagation(); addToCart(selectedProduct); }}>Add to Cart</button>
           </div>
         </div>
       )}

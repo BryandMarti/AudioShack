@@ -5,6 +5,7 @@
 .home {
 margin: 0;
 padding: 0;
+z-index: -2;
 }
 
 .Home-Div {
@@ -71,11 +72,20 @@ padding: 0;
     width: 85%;
   }
   
+  .fact h3 {
+    font-size: large;
+  }
+
   .fact p {
-    font-size: x-small;
+    font-size: medium;
   }
 
   .Hero {
     width: 85%;
+    z-index: -1;
+  }
+
+  .Slogan {
+    z-index: -1;
   }
 }
