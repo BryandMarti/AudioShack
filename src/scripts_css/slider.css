@@ -79,6 +79,11 @@
   color: #9ee2f1;
 }
 
+.gotoproducts {
+  font-size: medium;
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .StoreCards {
     padding: 15px;

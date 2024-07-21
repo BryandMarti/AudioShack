@@ -109,7 +109,7 @@ const ContactUsForm = () => {
           />
         </label>
         <br />
-        <button type="submit">Submit</button>
+        <button className="button" type="submit">Submit</button>
       </form>
       {error && <p style={{ backgroundColor: 'black', color: "red" }}>{error}</p>}
       {submitted && <p>Thank you for Visiting our Site!</p>}

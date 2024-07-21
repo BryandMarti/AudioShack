@@ -31,6 +31,7 @@
   font-size: 24px;
   cursor: pointer;
   justify-content: flex-end;
+  background-color: transparent;
 }
 
 .modal-image {
