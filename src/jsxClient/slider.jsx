@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Modal from './modal';
 import '../scripts_css/slider.css';
 import 'slick-carousel/slick/slick.css';
@@ -26,7 +26,6 @@ const ProductSlider = ({ products }) => {
       },
     ],
   };
-  
 
   const handleCardClick = (product) => {
     setSelectedProduct(product);
@@ -52,6 +51,7 @@ const ProductSlider = ({ products }) => {
               <img className="SliderImage" src={product.ImgPath} alt={product.Name} />
               <h3>{product.Name}</h3>
               <p>${product.Price}</p>
+              <Link className='gotoproducts' to="/products">Go to Products</Link>
             </div>
           </div>
         ))}
