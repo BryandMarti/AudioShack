@@ -1,4 +1,4 @@
-<a href='https://audio-shack.onrender.com/' target='blanck'>AudioShack</a>
+<a href='https://audio-shack.onrender.com/' target='blank'>AudioShack</a>
 
 ![Audiologo](https://github.com/user-attachments/assets/1228df5f-e4bb-4e64-bd11-28fc7bae7e20)
 
