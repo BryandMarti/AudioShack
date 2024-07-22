@@ -5,7 +5,7 @@ import Home from './jsxClient/home';
 import ContactUs from './jsxClient/ContactUs';
 import Products from './jsxClient/Products';
 import Error404 from './jsxClient/404';
-import logo from './staticImgs/Audiologo.png';
+import logo from './staticImgs/audiologo.png';
 import './scripts_css/Navigation.css';
 import Footer from './jsxClient/footer';
 import HamburgerMenu from './jsxClient/hamburgerMenu';
