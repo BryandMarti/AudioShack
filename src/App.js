@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import './scripts_css/across.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import logo from './staticImgs/audiologo.png';
+import logo from './staticImgs/Audiologo.png';
 import Home from './jsxClient/home';
 import ContactUs from './jsxClient/ContactUs';
 import Products from './jsxClient/Products';
