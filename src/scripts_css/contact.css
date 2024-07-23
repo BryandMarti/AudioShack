@@ -68,6 +68,10 @@ button {
   background: #0056b3;
 }
 
+.error {
+  border: 2px solid red;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1200px){
   form {
     width: 60%;
