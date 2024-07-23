@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.40bfb44a.css",
-    "main.js": "/static/js/main.9e00280d.js",
+    "main.js": "/static/js/main.f560858a.js",
     "static/media/jazz123.mp3": "/static/media/jazz123.0595867f2a4fdf2a5346.mp3",
     "static/media/videoplayback.mp4": "/static/media/videoplayback.34439579bb8f40c92f59.mp4",
     "static/media/pngtree-realistic-astronaut-illustration-png-image_6599323.png": "/static/media/pngtree-realistic-astronaut-illustration-png-image_6599323.f8544927805d1d489412.png",
     "static/media/theonly.png": "/static/media/theonly.b907bf32bd66ba44936a.png",
-    "static/media/audiologo.png": "/static/media/audiologo.753845f9ee45dde654d5.png",
+    "static/media/Audiologo.png": "/static/media/Audiologo.753845f9ee45dde654d5.png",
     "static/media/instagram.png": "/static/media/instagram.4a5ca5f1f75c07e462a3.png",
     "static/media/404errorImg.png": "/static/media/404errorImg.9a1935d61abf5eb89b7b.png",
     "static/media/facebook.png": "/static/media/facebook.c028307f18563c4d3e0f.png",
@@ -17,10 +17,10 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.40bfb44a.css.map": "/static/css/main.40bfb44a.css.map",
-    "main.9e00280d.js.map": "/static/js/main.9e00280d.js.map"
+    "main.f560858a.js.map": "/static/js/main.f560858a.js.map"
   },
   "entrypoints": [
     "static/css/main.40bfb44a.css",
-    "static/js/main.9e00280d.js"
+    "static/js/main.f560858a.js"
   ]
 }
