@@ -14,7 +14,10 @@ AudioShack is a modern e-commerce application built with React. It provides a re
   - Product Page: Allows users to view detailed information about products, including prices and descriptions. Users can also add products to their cart and view the cart's total cost.
   - Contact Us Page: Provides a form for users to contact the support team or provide feedback.
 
-
+you can fork this file and run it localy,
+install dependencies
+npm install
+npm install express
 
 In the project directory, you can run:
 
