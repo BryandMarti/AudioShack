@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.40bfb44a.css",
-    "main.js": "/static/js/main.9e00280d.js",
+    "main.js": "/static/js/main.b62070d8.js",
     "static/media/jazz123.mp3": "/static/media/jazz123.0595867f2a4fdf2a5346.mp3",
     "static/media/videoplayback.mp4": "/static/media/videoplayback.34439579bb8f40c92f59.mp4",
     "static/media/pngtree-realistic-astronaut-illustration-png-image_6599323.png": "/static/media/pngtree-realistic-astronaut-illustration-png-image_6599323.f8544927805d1d489412.png",
@@ -17,10 +17,10 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.40bfb44a.css.map": "/static/css/main.40bfb44a.css.map",
-    "main.9e00280d.js.map": "/static/js/main.9e00280d.js.map"
+    "main.b62070d8.js.map": "/static/js/main.b62070d8.js.map"
   },
   "entrypoints": [
     "static/css/main.40bfb44a.css",
-    "static/js/main.9e00280d.js"
+    "static/js/main.b62070d8.js"
   ]
 }
