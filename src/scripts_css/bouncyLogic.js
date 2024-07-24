@@ -1,3 +1,4 @@
+// This section defines speed constants and a helper function to generate random numbers within a range.
 const MIN_SPEED = 1.5;
 const MAX_SPEED = 2.5;
 
@@ -5,6 +6,8 @@ function randomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
 
+// This class represents a "blob" object that can move around the screen.
+// This method initializes a Blob object with random position and velocity.
 class Blob {
   constructor(el) {
     this.el = el;
@@ -20,6 +23,7 @@ class Blob {
     this.y = this.initialY;
   }
 
+  // This method updates the blob's position and handles collisions with screen edges.
   update() {
     this.x += this.vx;
     this.y += this.vy;
@@ -46,6 +50,8 @@ class Blob {
   }
 }
 
+
+// This function initializes the blobs and sets up an animation loop to update and move them.
 export function initBlobs() {
   const blobEls = document.querySelectorAll('.bouncing-blob');
   const blobs = Array.from(blobEls).map((blobEl) => new Blob(blobEl));
