@@ -8,7 +8,10 @@ function Products() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [sortOrder, setSortOrder] = useState('');
   const [productType, setProductType] = useState('');
-  const [cart, setCart] = useState({});
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem('cart');
+    return savedCart ? JSON.parse(savedCart) : {};
+  });
 
   useEffect(() => {
     fetch('/api/products')
@@ -26,6 +29,10 @@ function Products() {
         setProducts([]);
       });
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
 
   const handleProductClick = (product) => {
     setSelectedProduct(product);
@@ -117,7 +124,7 @@ function Products() {
       <div className="cart">
         {cartItems.map((item) => (
           <div key={item.Id} className="cart-item">
-            <p>Price: ${item.Price}</p>
+            <p>{item.Name} - ${item.Price}</p>
             <div className="cart-item-controls">
               <button onClick={() => decrementQuantity(item.Id)}>-</button>
               <span>{item.quantity}</span>
