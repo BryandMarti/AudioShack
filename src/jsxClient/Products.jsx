@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import '../scripts_css/across.css';
 import BouncyBalls from '../scripts_css/bouncyBalls';
 import '../scripts_css/audioslave.css';
+import '../scripts_css/cartPopup.css'; // Add this import for cart popup styling
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -12,6 +13,7 @@ function Products() {
     const savedCart = localStorage.getItem('cart');
     return savedCart ? JSON.parse(savedCart) : {};
   });
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   useEffect(() => {
     fetch('/api/products')
@@ -86,6 +88,10 @@ function Products() {
     return Object.values(cart).reduce((total, item) => total + item.Price * item.quantity, 0);
   };
 
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
   const renderProducts = (products) => {
     let filteredProducts = [...products];
 
@@ -121,19 +127,23 @@ function Products() {
     if (cartItems.length === 0) return <p>Your cart is empty</p>;
 
     return (
-      <div className="cart">
-        {cartItems.map((item) => (
-          <div key={item.Id} className="cart-item">
-            <p>{item.Name} - ${item.Price}</p>
-            <div className="cart-item-controls">
-              <button onClick={() => decrementQuantity(item.Id)}>-</button>
-              <span>{item.quantity}</span>
-              <button onClick={() => incrementQuantity(item.Id)}>+</button>
+      <div className="cart-popup">
+        <div className="cart-popup-content">
+          <span className="close-button" onClick={toggleCart}>&times;</span>
+          {cartItems.map((item) => (
+            <div key={item.Id} className="cart-item">
+              <p>{item.Name}</p>
+              <p>Price: ${item.Price}</p>
+              <div className="cart-item-controls">
+                <button onClick={() => decrementQuantity(item.Id)}>-</button>
+                <span>{item.quantity}</span>
+                <button onClick={() => incrementQuantity(item.Id)}>+</button>
+              </div>
             </div>
+          ))}
+          <div className="cart-total">
+            <h3>Total: ${calculateTotalCost().toFixed(2)}</h3>
           </div>
-        ))}
-        <div className="cart-total">
-          <h3>Total: ${calculateTotalCost().toFixed(2)}</h3>
         </div>
       </div>
     );
@@ -165,11 +175,11 @@ function Products() {
             <option value="Special">Special</option>
           </select>
         </div>
-        <div className="cart-container">
-        {renderCart()}
-        </div>
+        <button onClick={toggleCart}>View Cart</button>
       </div>
       {renderProducts(products)}
+
+      {isCartOpen && renderCart()}
 
       {selectedProduct && (
         <div className="popup">

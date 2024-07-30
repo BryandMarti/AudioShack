@@ -10,10 +10,12 @@ import './scripts_css/Navigation.css';
 import Footer from './jsxClient/footer';
 import HamburgerMenu from './jsxClient/hamburgerMenu';
 import backgroundMusic from './staticImgs/jazz123.mp3';
+import CartPopup from './jsxClient/CartPopup.jsx';
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef(null);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const togglePlayPause = () => {
     if (isPlaying) {
@@ -22,6 +24,10 @@ function App() {
       audioRef.current.play();
     }
     setIsPlaying(!isPlaying);
+  };
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
   };
 
   return (
@@ -44,6 +50,9 @@ function App() {
                   <li>
                     <Link className='NavLinks' to="/contact">Contact</Link>
                   </li>
+                  <li>
+                    <button className='NavLinks' onClick={toggleCart}>Cart</button>
+                  </li>
                 </ul>
                 <HamburgerMenu />
               </div>
@@ -64,6 +73,7 @@ function App() {
           {isPlaying ? 'Pause Music' : 'Play Music'}
         </button>
       </div>
+      {isCartOpen && <CartPopup toggleCart={toggleCart} />}
     </div>
   );
 }

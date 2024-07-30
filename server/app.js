@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use('/images', express.static(path.join(__dirname, 'src', 'images')));
 
 app.get('/api/products', (req, res) => {
-  const query = 'SELECT Name, Price, Description, ImgPath, TypeOf FROM EProducts';
+  const query = 'SELECT id, Name, Price, Description, ImgPath, TypeOf FROM EProducts';
   DataBaseKingConnect.query(query, (err, results) => {
     if (err) {
       console.error('Error executing MySQL query:', err);
